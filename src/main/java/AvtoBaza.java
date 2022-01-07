@@ -1,3 +1,4 @@
+import org.json.JSONObject;
 
 public class AvtoBaza {
     private int id;
@@ -36,4 +37,7 @@ public class AvtoBaza {
     public void setState(String state) {
         this.state = state;
     }
-}
+
+
+    }
+
