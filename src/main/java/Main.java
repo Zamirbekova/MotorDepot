@@ -12,7 +12,7 @@ public class Main {
 
         AvtoBaza avtoBaza = new AvtoBaza();
         System.out.println("#    |   Bus     |  Driver | State  ");
-        System.out.println("+————+————————————+—————————+—————————");
+        System.out.println("+————+————————————+————————+—————————");
         avtoBaza.methodAvto();
         System.out.println("\n");
 
