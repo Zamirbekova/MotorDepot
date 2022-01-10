@@ -6,16 +6,17 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class AvtoBaza {
-    Driver driver;
+    String driver;
     private int id;
     private String name;
     private String state;
 
-    public AvtoBaza(int id, String name, String state,Driver driver) throws IOException {
+    public AvtoBaza(int id, String name, String state,String driver) throws IOException {
         this.id = id;
         this.name = name;
         this.state = state;
         this.driver=driver;
+
     }
 
     public AvtoBaza() throws IOException {
@@ -48,7 +49,7 @@ public class AvtoBaza {
         return driver;
     }
 
-    public void setDriver(Driver driver){
+    public void setDriver(String driver){
 
     }
     public void methodAvto() throws IOException {
