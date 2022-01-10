@@ -6,14 +6,16 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class AvtoBaza {
+    Driver driver;
     private int id;
     private String name;
     private String state;
 
-    public AvtoBaza(int id, String name, String state) throws IOException {
+    public AvtoBaza(int id, String name, String state,Driver driver) throws IOException {
         this.id = id;
         this.name = name;
         this.state = state;
+        this.driver=driver;
     }
 
     public AvtoBaza() throws IOException {
@@ -42,6 +44,13 @@ public class AvtoBaza {
     public void setState(String state) {
         this.state = state;
     }
+    public Driver driver(Driver driver) {
+        return driver;
+    }
+
+    public void setDriver(Driver driver){
+
+    }
     public void methodAvto() throws IOException {
         String str = new String(Files.readAllBytes(Paths.get("C:\\Users\\User\\IdeaProjects\\MotorDepot\\src\\main\\java\\etap1.json")));
         JSONArray jsonArray = new JSONArray(str);
@@ -56,7 +65,7 @@ public class AvtoBaza {
             avtoBazas[i].setName(jsonObject1.getString("name"));
             avtoBazas[i].setState(jsonObject1.getString("state"));
         }
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < avtoBazas.length; i++) {
             System.out.println();
             System.out.print(avtoBazas[i].getId());
             System.out.printf("  %16s ", avtoBazas[i].getName());
@@ -65,4 +74,3 @@ public class AvtoBaza {
         }
     }
     }
-
